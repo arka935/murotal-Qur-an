@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/v1/*"
+  to = "/.netlify/functions/quran-api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/index.html"
+  status = 200
+  force = false
